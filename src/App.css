@@ -1,6 +1,8 @@
 /* Testing / Applying to all the elemnts on the page */
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #00ff00 #25292c;
 }
 
 .sticky {
@@ -146,19 +148,19 @@ html {
 }
 
 .skill-bx {
-  background-color: #25292c; /* Lighter background color */
+  background-color: #25292c;
   text-align: center;
-  border-radius: 20px; /* Soft edges */
+  border-radius: 20px;
   padding: 5rem;
 }
 
 .skill-bx h2 {
-  margin-bottom: 2rem; /* Add space below the heading */
+  margin-bottom: 2rem;
   font-size: 3rem;
 }
 .item img {
-  display: block; /* Make the image a block element */
-  margin: 0 auto; /* Center the image horizontally */
+  display: block;
+  margin: 0 auto;
   width: 100%;
 }
 .item p {
@@ -168,7 +170,7 @@ html {
 }
 
 /* Projects showecase */
-.projects {
+/* .projects {
   background-color: #1a181b;
 }
 .projects h2 {
@@ -187,7 +189,7 @@ html {
 
 .project-card img {
   width: 100%;
-  height: 100%; /* Make the image cover the entire card */
+  height: 100%;
   object-fit: cover;
 }
 
@@ -245,6 +247,69 @@ html {
 
 .project-card .card-title {
   margin-bottom: 0;
+} */
+.projects {
+  background-color: #1a181b;
+  padding: 50px;
+}
+.projects h2 {
+  font-size: 3rem;
+}
+.project-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 300px;
+}
+
+.img-container {
+  position: relative;
+  height: 100%;
+}
+
+.img-container img {
+  transition: filter 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-container:hover img {
+  filter: blur(5px);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.img-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay .text {
+  color: white;
+  text-align: center;
+}
+
+.github-icon {
+  width: 32px;
+  height: 32px;
+  margin-top: 10px;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+.github-icon:hover {
+  color: #00ff00;
 }
 
 /* Contact form styling */
@@ -302,7 +367,9 @@ html {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.neon-divider {
+/* Contact me section */
+
+/* .neon-divider {
   width: 70%;
   margin: 50px auto;
   height: 7px;
@@ -328,7 +395,7 @@ html {
 
 .neon-divider::after {
   right: -5%;
-}
+} */
 
 .custom-card {
   position: relative;
@@ -367,7 +434,7 @@ html {
 }
 
 .custom-card-side.front {
-  background-color: #de6c9e; /* Pink */
+  background-color: #de6c9e;
   background-image: linear-gradient(160deg, #de6c9e 0%, #f9a875 100%);
 }
 
@@ -401,4 +468,85 @@ html {
 }
 .github:hover {
   fill: #00cc00;
+}
+
+/* Exp Section */
+.exp-container {
+  width: 100%;
+  padding: 35px 10%;
+  background-color: #1a181b;
+}
+.exp-container {
+  padding-right: calc(10% - 30px);
+}
+
+.exp-container p {
+  color: rgb(0, 0, 0);
+}
+
+.exp-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+}
+.exp-col .title {
+  font-family: helvetica;
+  color: #00ff00;
+  padding: 0px 0px 20px 30px;
+}
+
+.exp-col .contents {
+  padding: 0px 30px;
+  border-left: 2px solid #bababa;
+}
+.exp-col .contents .box {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #00cc00;
+  background-color: #c3edc3;
+  cursor: pointer;
+  transition: all 0.4s;
+  margin-bottom: 20px;
+}
+.exp-col .contents .box:hover {
+  box-shadow: 0px 0px 12px 0px #00ff00;
+  border: 1px solid transparent;
+}
+.exp-col .contents .box::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  right: calc(100% + 22px);
+  top: 0;
+  background-color: #00ff00;
+  border: 2px solid white;
+}
+.exp-box h4 {
+  position: relative;
+  color: #11a372;
+}
+.exp-box h3 {
+  font-size: 19px;
+  padding: 10px 0px 6px;
+  font-family: helvetica;
+  color: #444;
+}
+.exp-box p {
+  line-height: 1.2;
+  color: #666;
+  font-size: 17px;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-copyright {
+  margin-top: 10px;
 }

@@ -82,7 +82,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <button className="btn glowing-text">
+              {/* <button className="btn glowing-text">
                 <span
                   role="img"
                   aria-label="Lightbulb"
@@ -103,7 +103,7 @@ const Navbar = () => {
                     />
                   </svg>
                 </span>
-              </button>
+              </button> */}
             </li>
           </ul>
         </div>

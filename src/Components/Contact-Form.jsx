@@ -4,11 +4,8 @@ import "../App.css";
 import contactImg from "../Assets/contact-me.png";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useState } from "react";
-// import LinkedinIcon from "../Assets/linkedin.svg";
-// import InstaIcon from "../Assets/insta.svg";
-// import GithubIcon from "../Assets/github.svg";
 
-const ContactForm = () => {
+const ContactForm = ({ translate }) => {
   const [isInfoVisible, setInfoVisible] = useState(false);
   //6Ld-0vApAAAAAKWFjZ88OygxM6IN4N-I7Wrq1ltX
   const handleReveal = () => {
@@ -32,10 +29,17 @@ const ContactForm = () => {
                       <h2>Reveal</h2>
                     </div>
                     <div className="custom-card-side back">
-                      <p>
-                        You can find all my information in the social links
-                        below!
-                      </p>
+                      {translate ? (
+                        <p>
+                          You can find all my information in the social links
+                          below!
+                        </p>
+                      ) : (
+                        <p>
+                          Puoi trovare tutte le mie informazioni nei social
+                          links qui sotto!
+                        </p>
+                      )}
                       <p>Email: mircea.rosca93@hotmail.com</p>
                     </div>
                   </div>

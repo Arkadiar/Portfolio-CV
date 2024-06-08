@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
-import Navbar from "./NavBar";
 import "../App.css";
 import AboutMe from "./AboutMe";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header>
       <div className="header-image">
-        <AboutMe></AboutMe>
+        <AboutMe
+          translate={props.translate}
+          setTranslate={props.setTranslate}
+        ></AboutMe>
       </div>
     </header>
   );

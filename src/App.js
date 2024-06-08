@@ -5,24 +5,29 @@ import Projects from "./Components/Projects";
 import Skills from "./Components/Skills";
 import Navbar from "./Components/NavBar";
 import ContactForm from "./Components/Contact-Form";
+import Experience from "./Components/Experience";
+import Footer from "./Components/Footer";
 
 function App() {
+  const [translate, setTranslate] = useState(false);
   return (
     <div className="App">
       <Navbar />
       <header id="about">
-        <Header />
+        <Header translate={translate} setTranslate={setTranslate} />
       </header>
       <main>
         <section className="skills" id="skills">
-          <Skills></Skills>
+          <Skills translate={translate}></Skills>
         </section>
         <section className="projects" id="projects">
-          <Projects></Projects>
+          <Projects translate={translate}></Projects>
         </section>
+        <Experience translate={translate} />
 
         <section id="contact">
-          <ContactForm></ContactForm>
+          <ContactForm translate={translate}></ContactForm>
+          <Footer />
         </section>
       </main>
     </div>

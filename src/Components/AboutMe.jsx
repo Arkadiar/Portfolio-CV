@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-export default function AboutMe() {
+export default function AboutMe({ translate, setTranslate }) {
   const [index, setIndex] = useState(0);
   const [remove, setRemove] = useState(false);
   const skills = ["React", "Nextjs", "Tailwind", "Java", "PostgreSQL"];
@@ -43,10 +43,8 @@ export default function AboutMe() {
     }
   }
 
-  const [text, setText] = useState(false);
-
   const handleText = () => {
-    setText((prevText) => {
+    setTranslate((prevText) => {
       return prevText === false ? true : false;
     });
   };
@@ -76,13 +74,13 @@ export default function AboutMe() {
           </button>
           <div className="description">
             <h1 className="glowing-text mb-4">
-              {text
+              {translate
                 ? "Welcome to my Portfolio / CV"
                 : "Benvenuti nel mio Portfolio / CV"}
             </h1>
 
             <p className="mb-4">
-              {text
+              {translate
                 ? `Hi! I'm Mircea, an emerging developer from Orvieto, Italy, keen on
               mastering website, web app, and game development. As a junior, I'm
               eager to soak up knowledge and tackle new challenges. Proficient
