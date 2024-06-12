@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 
-const Navbar = () => {
+const Navbar = ({ light, setLight }) => {
   const [active, setActive] = useState("");
   const [isPassedFirstPoint, setIsPassedFirstPoint] = useState(false);
+
+  function handleLight() {
+    setLight((prevLight) => {
+      console.log(light);
+      return prevLight === false ? true : false;
+    });
+  }
 
   const handleSetActive = (item) => {
     setActive(item);
@@ -82,7 +89,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              {/* <button className="btn glowing-text">
+              <button onClick={handleLight} className="btn glowing-text">
                 <span
                   role="img"
                   aria-label="Lightbulb"
@@ -103,7 +110,7 @@ const Navbar = () => {
                     />
                   </svg>
                 </span>
-              </button> */}
+              </button>
             </li>
           </ul>
         </div>

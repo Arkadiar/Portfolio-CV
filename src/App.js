@@ -9,10 +9,11 @@ import Experience from "./Components/Experience";
 import Footer from "./Components/Footer";
 
 function App() {
-  const [translate, setTranslate] = useState(false);
+  const [translate, setTranslate] = useState(true);
+  const [light, setLight] = useState(false);
   return (
     <div className="App">
-      <Navbar />
+      <Navbar light={light} setLight={setLight} />
       <header id="about">
         <Header translate={translate} setTranslate={setTranslate} />
       </header>

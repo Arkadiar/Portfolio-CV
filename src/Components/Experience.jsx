@@ -19,15 +19,15 @@ const jobs = [
 ];
 const Experience = ({ translate }) => {
   return (
-    <div class="exp-container">
-      <div class="exp-row">
-        <div class="exp-col">
-          <div class="title">
+    <div className="exp-container">
+      <div className="exp-row">
+        <div className="exp-col">
+          <div className="title">
             <h2 className="glowing-text">EDUCATION</h2>
           </div>
 
-          <div class="contents">
-            <div class="box">
+          <div className="contents">
+            <div className="box">
               <h4>2013 - 2017</h4>
               {translate ? (
                 <h3>High School Degree</h3>
@@ -49,7 +49,7 @@ const Experience = ({ translate }) => {
               )}
             </div>
 
-            <div class="box">
+            <div className="box">
               <h4>2018 - 2021</h4>
               {translate ? (
                 <h3>Bachelor's Degree</h3>
@@ -73,7 +73,7 @@ const Experience = ({ translate }) => {
               )}
             </div>
 
-            <div class="box">
+            <div className="box">
               <h4>2023 - 2024</h4>
               {translate ? (
                 <h3>Postgraduate Education</h3>
@@ -100,16 +100,16 @@ const Experience = ({ translate }) => {
           </div>
         </div>
 
-        <div class="exp-col">
-          <div class="title">
+        <div className="exp-col">
+          <div className="title">
             <h2 className="glowing-text">EXPERIENCE</h2>
           </div>
 
-          <div class="contents">
-            {jobs.map((job) => {
+          <div className="contents">
+            {jobs.map((job, id) => {
               if (translate) {
                 return (
-                  <div class="box">
+                  <div className="box" key={id}>
                     <h4>{job.year}</h4>
                     <h3>{job.title}</h3>
                     <h5>{job.company}</h5>
@@ -118,7 +118,7 @@ const Experience = ({ translate }) => {
                 );
               }
               return (
-                <div class="box">
+                <div className="box">
                   <h4>{job.year}</h4>
                   <h3>{job.titleIt}</h3>
                   <h5>{job.company}</h5>

@@ -100,6 +100,18 @@ html {
   position: relative;
   z-index: 2;
 }
+
+@media (max-width: 768px) {
+  .description {
+    font-size: 10px;
+  }
+  .description-container {
+    top: 40%;
+    right: 10px;
+    max-width: 90%;
+  }
+}
+
 /* Navbar styling for glowing text */
 .navbar-nav .nav-item {
   margin-left: 20px;
@@ -136,6 +148,15 @@ html {
   box-shadow: 0 0 8px #00ff00, 0 0 16px #00ff00;
 }
 
+@media (max-width: 768px) {
+  .navbar-nav .nav-item {
+    margin-left: 0;
+  }
+  .navbar-collapse {
+    text-align: center;
+  }
+}
+
 /* Skills Section */
 
 .skills {
@@ -167,6 +188,19 @@ html {
   width: 70%;
   display: block;
   margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 1rem;
+  }
+
+  .skill-bx {
+    padding: 2rem;
+  }
+
+  .skill-bx h2 {
+    font-size: 2rem;
+  }
 }
 
 /* Projects showecase */
@@ -311,6 +345,19 @@ html {
 .github-icon:hover {
   color: #00ff00;
 }
+@media (max-width: 768px) {
+  .projects {
+    padding: 20px;
+  }
+
+  .projects h2 {
+    font-size: 2rem;
+  }
+
+  .project-card {
+    height: 200px;
+  }
+}
 
 /* Contact form styling */
 .contact-section {
@@ -365,6 +412,12 @@ html {
 .image-container img {
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .contact-form-container {
+    padding: 20px;
+  }
 }
 
 /* Contact me section */
@@ -538,6 +591,15 @@ html {
   color: #666;
   font-size: 17px;
 }
+@media (max-width: 768px) {
+  .exp-container {
+    padding: 20px 5%;
+  }
+
+  .exp-row {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* Footer */
 .footer {
@@ -549,4 +611,10 @@ html {
 
 .footer-copyright {
   margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px 0;
+  }
 }
